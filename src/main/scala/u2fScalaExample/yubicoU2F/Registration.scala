@@ -11,7 +11,6 @@ import u2fScalaExample.Config.APP_ID
 import scala.collection.JavaConverters._
 import scala.concurrent.{ExecutionContext, Future}
 
-
 object Registration {
   import cats.data.Xor
   import cats.syntax.xor._

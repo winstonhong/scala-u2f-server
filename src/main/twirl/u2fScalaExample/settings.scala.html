@@ -11,13 +11,21 @@
     <div class="col-md-10">
         <h1>Welcome @username</h1>
         <p>Click the register button to register your U2F device</p>
-        <button data-input="register">Register</button>
+        <button data-input="register">Register</button><br/><br/>
+        <button data-input="authenticate">Authenticate</button>
     </div>
 </div>
+
 <div>
     <p data-display="touch">Touch your U2F token to register.</p>
     <form method="POST" action="/finishRegistration" id="form">
         <input type="hidden" name="tokenResponse" id="tokenResponse" />
+    </form>
+</div>
+<div>
+    <p data-display="touch-auth">Touch your U2F token to authenticate.</p>
+    <form method="POST" action="/finishAuthentication" id="form-auth">
+        <input type="hidden" name="tokenResponse" id="authResponse" />
     </form>
 </div>
 <script src="/js/main.js"></script>

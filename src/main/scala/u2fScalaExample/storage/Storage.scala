@@ -31,11 +31,11 @@ object UserStorage {
   }
 
   def put(username: Username, keyHandle: String, registration: String)(implicit ec: ExecutionContext): Future[String] = {
-    Future(JedisClient.store.hmset(s"userStorage:${username.get}", Map(keyHandle -> keyHandle, registration -> registration)))
+    Future(JedisClient.store.hmset(s"userStorage:${username.get}", Map(keyHandle -> registration)))
   }
 
   private def get(username: Username)(implicit ec: ExecutionContext): Future[util.Map[String, String]] = {
-    Future(JedisClient.store.hgetAll(s"userStorage: ${username.get}"))
+    Future(JedisClient.store.hgetAll(s"userStorage:${username.get}"))
   }
 
 }

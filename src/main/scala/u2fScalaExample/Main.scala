@@ -78,6 +78,6 @@ object Main extends App with CustomSSLContext {
       getFromDirectory("public")
     }
 
-  Http().bindAndHandle(route, "localhost", 8080, httpsContext = Some(httpsContext))
+  Http().bindAndHandle(route, "yubikey.example.com", 8080, httpsContext = Some(httpsContext))
     .recover { case e: Throwable ⇒ system.shutdown() }
 }
