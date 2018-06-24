@@ -21,6 +21,7 @@ sbt run
 U2F Registration Demo
 ------------
 + Access the link "https://yubikey.example.com:8080/settings" to launch the U2F registration demo
++ Input username/password (e.g., winston.hong@example.com/password) for primary authentication
 + Click **Register**
 + Touch Yubico U2F token to accomplish U2F registration
 + "Registration completed" will be displayed if U2F token has been registered successfully
@@ -28,6 +29,7 @@ U2F Registration Demo
 U2F Authentication Demo
 ------------
 + Access the link "https://yubikey.example.com:8080/settings" to launch the U2F authentication demo
++ Input username/password (e.g., winston.hong@example.com/password) for primary authentication
 + Click **Authenticate**
 + Touch Yubico U2F token to accomplish U2F authentication
 + "Authentication completed" will be displayed if U2F token has been authenticated successfully
